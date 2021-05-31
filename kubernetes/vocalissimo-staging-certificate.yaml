@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vocalissimo-org
+  namespace: default
+spec:
+  secretName: vocalissimo-org-tls
+  issuerRef:
+    name: letsencrypt-prod
+  commonName: vocalissimo.org
+  dnsNames:
+  - vocalissimo.org
